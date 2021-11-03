@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+	int m,n,r,t,a,b;
+	scanf("%d%d",&m,&n);
+	a=m;
+	b=n;
+	for(;n!=0;)//辗转相除法
+	{
+		r=m;
+		m=n;
+		n=r%n;
+	}
+	printf("%d %d",m,a/m*b);//m*n可能溢出
+	return 0;
+}
